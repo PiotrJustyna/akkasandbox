@@ -1,23 +1,19 @@
 using System;
 using Akka.Actor;
 
-public class PrintMyActorRefActor : UntypedActor
+namespace AkkaSandbox
 {
-    protected override void OnReceive(object message)
+    public class PrintMyActorRefActor : UntypedActor
     {
-        switch (message)
+        protected override void OnReceive(object message)
         {
-            case "printit":
-                try
-                {
+            switch (message)
+            {
+                case "printit":
                     IActorRef secondRef = Context.ActorOf(Props.Empty, "second-actor");
                     Console.WriteLine($"Second: {secondRef}");
-                }
-                catch (System.Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
-                break;
+                    break;
+            }
         }
     }
 }
