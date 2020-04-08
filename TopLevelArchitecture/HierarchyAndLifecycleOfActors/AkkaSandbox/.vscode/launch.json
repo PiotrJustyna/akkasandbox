@@ -9,9 +9,9 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/AkkaSandbox/bin/Debug/netcoreapp3.1/AkkaSandbox.dll",
+            "program": "${workspaceFolder}/bin/Debug/netcoreapp3.1/AkkaSandbox.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/AkkaSandbox",
+            "cwd": "${workspaceFolder}",
             "console": "internalConsole",
             "stopAtEntry": false
         },
